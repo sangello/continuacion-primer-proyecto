@@ -11,7 +11,7 @@ import Home from './Pages/Home';
 const App = () => (
 
     <Router>
-          {/** ----------- Clase 6.4 - Declarando Router y Rutas-------- * 
+          {/** ----------- Clase 6.4 - Metodología Atomic Design -------- * 
            * Pasos para crear la aplicacion de 0:
            *     1) npx create-react-app continuacion-primer-proyecto
            *     2) crear proyecto en GitHUB
@@ -19,6 +19,8 @@ const App = () => (
            *             git remote add origin https://github.com/sangello/continuacion-primer-proyecto.git
            *     4) npm add ed-grid edteam-style-guides node-sass
            *     5) npm add react-router-dom  
+           * 
+           * /** ----------- Clase 6.5 - Peticiones API REST -------- * 
            */}
         <MainMenu />   
         <Switch>
