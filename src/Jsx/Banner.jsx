@@ -9,7 +9,7 @@ const Banner = () => (
             <div className="lg-cols-4 lg-x-2">
             <img className="main-banner__img" src="tu-imagen.jpg" alt="imagen"/>
             <div className="main-banner__data s-center">
-                <p className="t2 s-mb-0">Título del banner</p>
+                <p className="t2 s-mb-0">Proyecto Refactor</p>
                 <p> Subtítulo del banner</p>
                 <a href="https://" className="button">Botón del banner</a>
             </div>
