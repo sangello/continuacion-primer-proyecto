@@ -1,12 +1,12 @@
 import React from 'react';
-import "./Styles/Styles.scss";
-import Banner from './Jsx/Banner';
-import Formulario from './Jsx/Formulario';
-import CourseGrid from './Jsx/CourseGrid';
-import Course from './Jsx/Course';
+import "../Styles/Styles.scss";
+import Formulario from './Pages/Formulario';
+import CourseGrid from './Organisms/CourseGrid';
+import Course from './Pages/Course';
 import { BrowserRouter as Router , Route, Switch} from "react-router-dom"
-import MainMenu from './Jsx/MainMenu';
-import Historial from './Jsx/Historial';
+import MainMenu from './Organisms/MainMenu';
+import Historial from './Pages/Historial';
+import Home from './Pages/Home';
 
 const App = () => (
 
@@ -22,7 +22,7 @@ const App = () => (
            */}
         <MainMenu />   
         <Switch>
-          <Route path="/" exact  component={Banner}/>
+          <Route path="/" exact  component={Home}/>
           <Route path="/cursos/:id" exact  component={Course}/>
           <Route path="/cursos" exact  component={CourseGrid}/>
           <Route path="/historial" exact  component={Historial}/>
