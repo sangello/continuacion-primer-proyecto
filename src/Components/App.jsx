@@ -7,6 +7,7 @@ import { BrowserRouter as Router , Route, Switch} from "react-router-dom"
 import MainMenu from './Organisms/MainMenu';
 import Historial from './Pages/Historial';
 import Home from './Pages/Home';
+import Users from './Pages/Users';
 
 const App = () => (
 
@@ -21,6 +22,17 @@ const App = () => (
            *     5) npm add react-router-dom  
            * 
            * /** ----------- Clase 6.5 - Peticiones API REST -------- * 
+           * Al front no le importa la tecnologia del backend sino que importa los
+           *  endpoint que vamos a ir a consultar.
+           * - Postman  --> https://www.postman.com/
+           *    + permite hacer peticiones a APIs para que podamos probar si las URL estan funcionando
+           *      correctamente
+           *    + vamos a probar con un API llamado JsonPlaceholder que permite hacer testeos Fake Online 
+           *      https://jsonplaceholder.typicode.com/
+           * 
+           * /** ----------- Clase 6.6 - Peticiones con fetch -------- * 
+           * 
+           * 
            */}
         <MainMenu />   
         <Switch>
@@ -29,6 +41,7 @@ const App = () => (
           <Route path="/cursos" exact  component={CourseGrid}/>
           <Route path="/historial" exact  component={Historial}/>
           <Route path="/historial/:valor" exact  component={Historial}/>
+          <Route path="/usuarios" exact  component={Users}/>
           <Route path="/formulario" exact  component={ () => <Formulario name="Pagina de contacto"/> } />
           <Route component = { () => (
               <div className="ed-grid">Q
