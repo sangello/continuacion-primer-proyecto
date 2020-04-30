@@ -72,6 +72,9 @@ const App = () => (
            * 
            * Notamos que tuvimos que reescribir un componente funcional en componente de clase. Para no hacer
            * eso tenemos la ayuda de los hooks (Nos permite evitar la re-escritura de codigo)
+           * 
+           *  modified:   src/Components/App.jsx
+           *  modified:   src/Components/Organisms/CourseGrid.jsx
            */}
         <MainMenu />   
         <Switch>
