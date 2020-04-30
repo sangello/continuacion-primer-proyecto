@@ -58,7 +58,20 @@ const App = () => (
            * 
            *  /** ---------- Clase 6.9 - API's para practicar ------------- *
            *  - Tu propio server json https://my-json-server.typicode.com/
+           *  - https://any-api.com/
            * 
+           *  /** --------- Clase 7.1 - Creando tu propio servidor JSON ---------*
+           * -- Seguir los pasos de la pagina: https://my-json-server.typicode.com/
+           *  1) creamos una carpeta Json-db donde ponemos un json. C:\Users\sangello\OneDrive - Capgemini\Proyectos_Seba\EdTeam\curso_react
+           *  2) Me ubico en la carpeta json-db e inicio un curso en git --> git init
+           *  3) git add db.json
+           *  4) vamos a github.com y creamos el proyecto que se llama json-db
+           *  5) git remote add origin https://github.com/sangello/json-db.git
+           *  6) git push origin master
+           *  7) pongo esto (http://my-json-server.typicode.com/sangello/json-db/Cursos) en la url y tengo el json
+           * 
+           * Notamos que tuvimos que reescribir un componente funcional en componente de clase. Para no hacer
+           * eso tenemos la ayuda de los hooks (Nos permite evitar la re-escritura de codigo)
            */}
         <MainMenu />   
         <Switch>

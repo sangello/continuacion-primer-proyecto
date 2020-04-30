@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react'
 import CourseCard from '../Molecules/CourseCard'
+import axios from 'axios'
 
-
+/**
+// Reescribimos el componente de tipo clase por lo que comentamos este codigo
 const Cursos = [
     { "id":1,
       "title" : "Java Desde 0",
@@ -43,6 +45,50 @@ const CourseGrid = () => (
         </div>
     </div>
 
-)
+) */
+
+class CourseGrid extends Component {
+
+  constructor(props) {
+      super(props)
+      
+      //Inicializo users con un array vacio
+      this.state = {
+        Cursos: []
+      }
+
+  }
+
+  // --- Axios ---
+  componentDidMount(){
+      axios.get('http://my-json-server.typicode.com/sangello/json-db/Cursos')
+      .then(responseAxios => {
+          this.setState({
+              Cursos: responseAxios.data
+          })
+      })
+  }
+
+  render() {
+    const { Cursos } = this.state
+    return (
+      <div>
+        <h3 className="ed-grid m-grid-1 center">RecorriendoArrays - CourseGrid</h3>
+        <div className="ed-grid m-grid-4">
+          {Cursos.map ( c  => (
+                <CourseCard 
+                    key={c.id}
+                    id={c.id}
+                    title={c.titulo}
+                    image={c.image}
+                    price={c.price}
+                    profesor={c.profesor}
+                /> )) }
+        </div>
+      </div>
+
+    )
+  }
+}
 
 export default CourseGrid
