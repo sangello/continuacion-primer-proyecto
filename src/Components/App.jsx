@@ -56,6 +56,9 @@ const App = () => (
            * modified:   src/Components/App.jsx
            * modified:   src/Components/Pages/Users.jsx
            * 
+           *  /** ---------- Clase 6.9 - API's para practicar ------------- *
+           *  - Tu propio server json https://my-json-server.typicode.com/
+           * 
            */}
         <MainMenu />   
         <Switch>
