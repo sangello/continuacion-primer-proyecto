@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import UserCard from '../Molecules/UserCard'
+import axios from 'axios'
 
 
 class Users extends Component {
@@ -14,9 +15,21 @@ class Users extends Component {
         }
 
     }
+
+    // --- Axios ---
+    componentDidMount(){
+        axios.get('https://jsonplaceholder.typicode.com/users')
+        .then(responseAxios => {
+            this.setState({
+                users: responseAxios.data
+            })
+        })
+    }
+
+    // --- Fetch ---
     //Cuando el coponente se haya montado quiero obtener el array
     // de postman y ponerlo en user
-    componentDidMount(){
+    /** componentDidMount(){
         //fetch('https://jsonplaceholder.typicode.com/users', {method:'get'})
         //.then(respuesta => console.log(respuesta))
 
@@ -27,7 +40,7 @@ class Users extends Component {
                 users: response2
             })
         ))
-    }
+    } */
 
     render() {
         const { users } = this.state

@@ -38,6 +38,24 @@ const App = () => (
            *  modified: src/Components/Organisms/MainMenu.jsx
            *  new file: src/Components/Pages/Users.jsx
            * 
+           * /**----------- Clase 6.7 - Actualizando el estado con la respuesta -------- *
+           * Llama al endopoint y muestra la lista de usuarios.
+           * 
+           * modified:   src/Components/App.jsx
+           * modified:   src/Components/Pages/Users.jsx
+           * 
+           * 
+           *  /**----------- Clase 6.8 Reescribiendo peticiones con axios ------- *
+           *  - otro curso en la plataforma para conocer mas fetch y sus utilitarios --> https://ed.team/cursos/ajax-ws
+           *  - En muchos proyectos podemos utilizar fetch, pero existe otra libreria
+           *  que se llama Axios.
+           * - Se instala la libreria haciendo npm add axios
+           * 
+           * modified:   package-lock.json
+           * modified:   package.json
+           * modified:   src/Components/App.jsx
+           * modified:   src/Components/Pages/Users.jsx
+           * 
            */}
         <MainMenu />   
         <Switch>
