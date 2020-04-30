@@ -17,8 +17,16 @@ class Users extends Component {
     //Cuando el coponente se haya montado quiero obtener el array
     // de postman y ponerlo en user
     componentDidMount(){
+        //fetch('https://jsonplaceholder.typicode.com/users', {method:'get'})
+        //.then(respuesta => console.log(respuesta))
+
         fetch('https://jsonplaceholder.typicode.com/users', {method:'get'})
-        .then(respuesta => console.log(respuesta))
+        .then(response => response.json())
+        .then(response2 => console.log(
+            this.setState({
+                users: response2
+            })
+        ))
     }
 
     render() {
@@ -26,7 +34,7 @@ class Users extends Component {
         return (
             <div className="ed-grid">
                 <h1>Usuarios</h1>
-                <div>
+                <div className="ed-grid s-grid-2 m-sgrid-3 l-grid-4">
                     {
                         users.map(u => (
                             <UserCard 

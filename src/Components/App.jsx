@@ -31,7 +31,12 @@ const App = () => (
            *      https://jsonplaceholder.typicode.com/
            * 
            * /** ----------- Clase 6.6 - Peticiones con fetch -------- * 
+           * Llamar al Endpoint para obtener una lista de usuarios.
            * 
+           *  modified: src/Components/App.jsx
+           *  new file: src/Components/Molecules/UserCard.jsx
+           *  modified: src/Components/Organisms/MainMenu.jsx
+           *  new file: src/Components/Pages/Users.jsx
            * 
            */}
         <MainMenu />   
