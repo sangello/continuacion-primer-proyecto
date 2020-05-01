@@ -75,6 +75,13 @@ const App = () => (
            * gi
            *  modified:   src/Components/App.jsx
            *  modified:   src/Components/Organisms/CourseGrid.jsx
+           * 
+           * /** --------- Clase 7.2 - Agregando loader a nuestras peticiones ---------
+           * 
+           * 
+           * 
+           * 
+           * 
            */}
         <MainMenu />   
         <Switch>

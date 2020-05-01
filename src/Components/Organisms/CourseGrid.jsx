@@ -74,17 +74,21 @@ class CourseGrid extends Component {
     return (
       <div>
         <h3 className="ed-grid m-grid-1 center">RecorriendoArrays - CourseGrid</h3>
-        <div className="ed-grid m-grid-4">
-          {Cursos.map ( c  => (
-                <CourseCard 
-                    key={c.id}
-                    id={c.id}
-                    title={c.titulo}
-                    image={c.image}
-                    price={c.price}
-                    profesor={c.profesor}
-                /> )) }
-        </div>
+        {Cursos.length === 0 
+            ? <h1>Cargando ... </h1>
+            : <div className="ed-grid m-grid-4">
+                {Cursos.map ( c  => (
+                      <CourseCard 
+                          key={c.id}
+                          id={c.id}
+                          title={c.titulo}
+                          image={c.image}
+                          price={c.price}
+                          profesor={c.profesor}
+                      /> )) }
+            </div>
+        }
+       
       </div>
 
     )
