@@ -98,6 +98,18 @@ const App = () => (
            * new file:   src/Components/Organisms/UsersGrid.jsx
            * new file:   src/Components/Pages/Courses.jsx
            * modified:   src/Components/Pages/Users.jsx
+           * 
+           * /** --------- Clase 7.4 ---------------
+           * Se va a escribir un componente de Orden superior
+           * Teoria: Un componente de Orden superior nos permite reutilizar logica a lo largo de la
+           * aplicacion en diversos componentes.
+           * HOC (High Order Copmponent) : es una funcion que recibe un componente, lo procesa y devuelve otro
+           * componente luego de ser procesado.
+           * 
+           * standard de nomenclatura: Se recomienda que empiezen con la paltabra with...
+           * 
+           * 
+           * 
            */}
         <MainMenu />   
         <Switch>
