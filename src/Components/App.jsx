@@ -1,7 +1,7 @@
 import React from 'react';
 import "../Styles/Styles.scss";
 import Formulario from './Pages/Formulario';
-import CourseGrid from './Organisms/CourseGrid';
+import Courses from './Pages/Courses';
 import Course from './Pages/Course';
 import { BrowserRouter as Router , Route, Switch} from "react-router-dom"
 import MainMenu from './Organisms/MainMenu';
@@ -40,7 +40,7 @@ const App = () => (
            * 
            * /**----------- Clase 6.7 - Actualizando el estado con la respuesta -------- *
            * Llama al endopoint y muestra la lista de usuarios.
-           * 
+           * utilizacion de fech
            * modified:   src/Components/App.jsx
            * modified:   src/Components/Pages/Users.jsx
            * 
@@ -89,13 +89,21 @@ const App = () => (
            * modified:   src/Components/Organisms/CourseGrid.jsx
            * modified:   src/Components/Pages/Users.jsx
            * 
-           * 
+           * /** --------- Clase 7.3 - Eliminando incosistencias en el proyect ---------
+           * High order component, para Escribir funciones que hagan cierta logica
+           * por nosotros
+           * hay 3 componentes vistos hasta el momento (Funcionales, de Clase y High order component)
+           * modified:   src/Components/App.jsx
+           * modified:   src/Components/Organisms/CourseGrid.jsx
+           * new file:   src/Components/Organisms/UsersGrid.jsx
+           * new file:   src/Components/Pages/Courses.jsx
+           * modified:   src/Components/Pages/Users.jsx
            */}
         <MainMenu />   
         <Switch>
           <Route path="/" exact  component={Home}/>
           <Route path="/cursos/:id" exact  component={Course}/>
-          <Route path="/cursos" exact  component={CourseGrid}/>
+          <Route path="/cursos" exact  component={Courses}/>
           <Route path="/historial" exact  component={Historial}/>
           <Route path="/historial/:valor" exact  component={Historial}/>
           <Route path="/usuarios" exact  component={Users}/>
