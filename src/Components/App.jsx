@@ -77,9 +77,17 @@ const App = () => (
            *  modified:   src/Components/Organisms/CourseGrid.jsx
            * 
            * /** --------- Clase 7.2 - Agregando loader a nuestras peticiones ---------
+           * Se hace esta logica en varios lados por ende necesitamos hacer algo generico para no tener que 
+           * repetirlo.
+           *         users.length === 0
+           *            ? <h1 className="t3">Cargando...</h1> 
+           *            : <Se renderiza los usuarios>
            * 
-           * 
-           * 
+           * Para ello existe el High order component, para Escribir funciones que hagan cierta logica
+           * por nosotros. Se verá la clase que viene. 
+           * modified:   src/Components/App.jsx
+           * modified:   src/Components/Organisms/CourseGrid.jsx
+           * modified:   src/Components/Pages/Users.jsx
            * 
            * 
            */}
