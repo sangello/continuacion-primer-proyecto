@@ -6,7 +6,7 @@ import React, { Component } from "react"
  * y devuelve otro componente 
  * 
  */
-const withLoader = ( WrapperComponent ) => {
+const withLoader = ( propValue, WrapperComponent ) => {
     return class WithLoader extends Component{
 
             constructor(props){
@@ -14,9 +14,15 @@ const withLoader = ( WrapperComponent ) => {
             }
 
             render(){
+                console.log(this.props)
                 //Devuelve el mismo componente WrapperComponent que recibo como entrada
                 // con sus mismas propiedades
-                return <WrapperComponent {...this.props} />
+                // this.props.MuchosCursos.length === 0
+                // this.props["MuchosCursos"].length
+                return this.props[propValue].length === 0
+                            ? <h3>Cargando...</h3>
+                            : <WrapperComponent {...this.props} />
+                
             }
 
     }

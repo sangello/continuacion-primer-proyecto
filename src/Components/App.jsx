@@ -99,7 +99,7 @@ const App = () => (
            * new file:   src/Components/Pages/Courses.jsx
            * modified:   src/Components/Pages/Users.jsx
            * 
-           * /** --------- Clase 7.4 ---------------
+           * /** --------- Clase 7.4 - Escribiendo un componente de order superior ---------------
            * Se va a escribir un componente de Orden superior
            * Teoria: Un componente de Orden superior nos permite reutilizar logica a lo largo de la
            * aplicacion en diversos componentes.
@@ -108,8 +108,20 @@ const App = () => (
            * 
            * standard de nomenclatura: Se recomienda que empiezen con la paltabra with...
            * 
+           * modified:   src/Components/App.jsx
+           * new file:   src/Components/HOC/withLoader.js
+           * modified:   src/Components/Organisms/CourseGrid.jsx
            * 
+           * /**  ----- Clase 7.5  -  Agregando logica reutilizable al HOC ----- *
            * 
+           * Se agrego la funcionalidad en withLoader.js
+           *  --> return this.props[propValue].length === 0
+           *          ? <h3>Cargando...</h3>
+           *          : <WrapperComponent {...this.props} />
+           * modified:   src/Components/App.jsx
+           * modified:   src/Components/HOC/withLoader.js
+           * modified:   src/Components/Organisms/CourseGrid.jsx
+           * modified:   src/Components/Organisms/UsersGrid.jsx
            */}
         <MainMenu />   
         <Switch>

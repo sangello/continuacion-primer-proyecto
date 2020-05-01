@@ -5,9 +5,7 @@ import withLoader from '../HOC/withLoader'
 const CourseGrid = ({MuchosCursos}) => (
 <div>
     <h3 className="ed-grid m-grid-1 center">RecorriendoArrays - CourseGrid</h3>
-    {MuchosCursos.length === 0 
-        ? <h1>Cargando ... </h1>
-        : <div className="ed-grid m-grid-4">
+        <div className="ed-grid m-grid-4">
             {MuchosCursos.map ( c  => (
                   <CourseCard 
                       key={c.id}
@@ -25,7 +23,7 @@ const CourseGrid = ({MuchosCursos}) => (
 </div>
 )
 
-export default withLoader(CourseGrid)
+export default withLoader("MuchosCursos",CourseGrid)
 
 
 
