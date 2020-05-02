@@ -3,7 +3,7 @@ import "../Styles/Styles.scss";
 import Formulario from './Pages/Formulario';
 import Courses from './Pages/Courses';
 import Course from './Pages/Course';
-import CourseMejorado from './Pages/CourseMejorado';
+import CoursePasadoAClass from './Pages/CoursePasadoAClass';
 import { BrowserRouter as Router , Route, Switch} from "react-router-dom"
 import MainMenu from './Organisms/MainMenu';
 import Historial from './Pages/Historial';
@@ -123,11 +123,21 @@ const App = () => (
            * modified:   src/Components/HOC/withLoader.js
            * modified:   src/Components/Organisms/CourseGrid.jsx
            * modified:   src/Components/Organisms/UsersGrid.jsx
+           * 
+           *  /**  ----- Clase 8.1  - Hooks - Reescribiendo componentes para utilizar el estado ----- *
+           *  Reescribiendo Courses a Class
+           *    - ver https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/template_strings
+           *      donde explica Template Script de ECMA Script 6
+           *    - Agregue en la carpeta Internet documentacion de lo que es --> Template Strings (´)
+           *    - Hooks: Son funcionalidades que nos permiten utilizar el estado y ciclo de vida
+           *            de los componentes funcionales. Ya no hay que reescribir los componentes
+           *            funcionales a componente de Clase.
+           * 
            */}
         <MainMenu />   
         <Switch>
           <Route path="/" exact  component={Home}/>
-          <Route path="/cursos/:id" exact  component={CourseMejorado}/>
+          <Route path="/cursos/:id" exact  component={CoursePasadoAClass}/>
           <Route path="/cursos" exact  component={Courses}/>
           <Route path="/historial" exact  component={Historial}/>
           <Route path="/historial/:valor" exact  component={Historial}/>
