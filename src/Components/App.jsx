@@ -3,6 +3,7 @@ import "../Styles/Styles.scss";
 import Formulario from './Pages/Formulario';
 import Courses from './Pages/Courses';
 import Course from './Pages/Course';
+import CourseMejorado from './Pages/CourseMejorado';
 import { BrowserRouter as Router , Route, Switch} from "react-router-dom"
 import MainMenu from './Organisms/MainMenu';
 import Historial from './Pages/Historial';
@@ -126,7 +127,7 @@ const App = () => (
         <MainMenu />   
         <Switch>
           <Route path="/" exact  component={Home}/>
-          <Route path="/cursos/:id" exact  component={Course}/>
+          <Route path="/cursos/:id" exact  component={CourseMejorado}/>
           <Route path="/cursos" exact  component={Courses}/>
           <Route path="/historial" exact  component={Historial}/>
           <Route path="/historial/:valor" exact  component={Historial}/>

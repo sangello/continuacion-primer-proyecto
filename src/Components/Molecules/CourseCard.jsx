@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 const CourseCard = ({id,title, image, price, profesor}) => (
     <article className="card">
-        <h3>RecorriendoArrays</h3>
+        <h3>CourseCard</h3>
         <div className="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
             {/**
              * Un ancla en HTML para redireccionar es con <a> pero recarga la pagina. No es una
