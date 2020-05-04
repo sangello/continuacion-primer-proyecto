@@ -61,7 +61,9 @@ class Courses extends Component {
 
   // --- Axios ---
   componentDidMount(){
-      axios.get('http://my-json-server.typicode.com/sangello/json-db/Cursos')
+    //Utilizando Ejemplo de WebServiceRest, https://github.com/sangello/WebServiceRest
+    axios.get('https://localhost:8443/WebServiceRest/restService/InfoService/getAllCursos')
+    //axios.get('https://my-json-server.typicode.com/sangello/json-db/Cursos')
       .then(responseAxios => {
           this.setState({
               Cursos: responseAxios.data

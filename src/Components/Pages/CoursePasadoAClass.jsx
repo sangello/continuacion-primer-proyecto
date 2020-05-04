@@ -4,7 +4,6 @@ import axios from 'axios'
 class CoursePasadoAClass extends Component {
 
   constructor(props) {
-    alert("constructor")
     super(props)
     //Inicializo users con un array vacio
     this.state = {
@@ -15,16 +14,18 @@ class CoursePasadoAClass extends Component {
 
   // --- Axios ---
   componentDidMount(){
-    alert("componentDidMount")
     //axios.get('http://my-json-server.typicode.com/sangello/json-db/Cursos/'+this.props.match.params.id)
     //Mejor escrito de esta otra forma con TemplatesStrings de ECMA SCRIPT 6
-    axios.get(`http://my-json-server.typicode.com/sangello/json-db/Cursos/${this.props.match.params.id}`)
-    .then(responseAxios => {
-        //console.log("rta: "+Object.values(responseAxios.data))
-        this.setState({
-          CursoActual: responseAxios.data
-        })
-    })
+    //axios.get(`http://my-json-server.typicode.com/sangello/json-db/Cursos/${this.props.match.params.id}`)
+    
+    //Utilizando Ejemplo de WebServiceRest, https://github.com/sangello/WebServiceRest
+    // localhost:8443 si queremos que sea https por lo configurado en tomcat.
+    axios.get(`https://localhost:8443/WebServiceRest/restService/InfoService/getCurso/id=${this.props.match.params.id}`)
+      .then(responseAxios => {
+          this.setState({
+            CursoActual: responseAxios.data
+          })
+      })
   }
 
   componentDidUpdate(){
@@ -32,7 +33,6 @@ class CoursePasadoAClass extends Component {
   }
 
   render() {
-    alert("render")
     //const { Curso } = this.state
     //const CursoActual = Cursos.filter ( c => c.id === parseInt(this.props.match.params.id))[0]
     //const { CursoActual } = this.state
@@ -40,7 +40,6 @@ class CoursePasadoAClass extends Component {
         <div className="ed-grid m-grid-3">
         {this.state.CursoActual?(
                 <>  
-
                     {/**<h1 className="m-cols-3">Curso: {match.params.id}</h1>*/}
                     <h1 className="m-cols-3">{this.state.CursoActual.title}</h1>
                     <img className="m-cols-1" src= {this.state.CursoActual.image} alt= {this.state.CursoActual.title}/>
