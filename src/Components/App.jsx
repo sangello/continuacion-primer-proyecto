@@ -9,6 +9,7 @@ import MainMenu from './Organisms/MainMenu';
 import Historial from './Pages/Historial';
 import Home from './Pages/Home';
 import Users from './Pages/Users';
+import CourseHooks from './Pages/CourseHooks';
 
 const App = () => (
 
@@ -133,11 +134,28 @@ const App = () => (
            *            de los componentes funcionales. Ya no hay que reescribir los componentes
            *            funcionales a componente de Clase.
            * 
+           * /**  ----- Clase 8.2  - Utilizando el hook useState ----- *
+           *  git checkout -f --> retornas los cambios
+           *  se crea nueva clase Componente CourseHooks para que queden los 3
+           * Course --> Componente funcional
+           * CoursePasadoAClass --> Componente de Clase. (Se lo tuvo que pasar para poner el metodo componentDidMount )
+           * CourseHook --> Componente pasado a Hook
+           * Hay 2 Hooks en react que podemos utilizar:
+           *            - useState (Disponible desde la version 16.8 de react en adelante)
+           *            - useEfect
+           * 
+           * 
+           * 
+           * 
+           * 
+           * 
+           * 
+           * 
            */}
         <MainMenu />   
         <Switch>
           <Route path="/" exact  component={Home}/>
-          <Route path="/cursos/:id" exact  component={CoursePasadoAClass}/>
+          <Route path="/cursos/:id" exact  component={CourseHooks}/>
           <Route path="/cursos" exact  component={Courses}/>
           <Route path="/historial" exact  component={Historial}/>
           <Route path="/historial/:valor" exact  component={Historial}/>
