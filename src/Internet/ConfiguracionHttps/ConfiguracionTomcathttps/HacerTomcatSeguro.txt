@@ -1,0 +1,7 @@
+Pasos para hacer tomcat Seguro : https
+
+1) ir a java Bin
+2) ejecutar
+keytool -genkey -alias tomcat -keyalg RSA -keystore "C:\Program Files\Apache Software Foundation\Tomcat 9.0\conf\localhost.jks"
+3) ver video
+https://www.youtube.com/watch?v=ke1SgU_HY80
