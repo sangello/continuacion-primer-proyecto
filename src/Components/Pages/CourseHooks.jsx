@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 const CourseHooks = ({ match }) => {
   //Se usa la funcion useState es un hook que nos permite actualizar el estado 
@@ -18,6 +18,8 @@ const CourseHooks = ({ match }) => {
   })*/
 
   //Otra forma en lugar de usar CursoActual usar estado directamente.
+  //Ejemplo Hook: UseState
+  /**
   const [estado, setState] = useState({
     
       id: 1,
@@ -27,16 +29,35 @@ const CourseHooks = ({ match }) => {
       profesor: "juan Alberto"
     
   })
+   */
+  
   // ...state --> pone todos los elementos del estado
   // solamente cambia el title
   // sin ...state cambia solamente el titulo y
   // el resto de los atributos se pierden
+  /** Ejemplo Hook: UseState
   const changeTitle = (text) => {
     setState ({
       ...estado,
       title: text
     })
   }
+  */
+
+  //Inicio un estado con un objeto vacio
+  //Useeffect, hook que simula el ciclo de vida del componente 
+ const [estado, setState] = useState({ })
+
+  //useEffect se ejecuta cada vez que el componete se renderiza
+  //Se vuelve a renderizar un componente cuando recibe nuevas propiedades o su estado cambia
+  //por lo que se hace recursivo 
+  //la primera vez que corre se renderiza que llama a useEffect que renderiza y vuelve a llamar a useEffect
+  // para evitar eso se agrega un segundo parametro de entrada [] --> Emula el componentDidmount que corre una sola vez
+  useEffect ( () => {
+    axios.get('https://my-json-server.typicode.com/sangello/json-db/Cursos/4')
+    .then(responseAxios => setState(responseAxios.data))//setState(responseAxios.data)--> actualiza el estado
+  }, [])
+  
 
   return (
 
@@ -48,7 +69,10 @@ const CourseHooks = ({ match }) => {
           <h1 className="m-cols-3">{estado.title}</h1>
           <img className="m-cols-1" src={estado.image} alt={estado.title} />
           <p className="m-cols-2"> Profesor: {estado.profesor} </p>
-          <button onClick={changeTitle.bind(this, "TituloNuevo AAA")}>Cambiar Titulo</button>
+          {/**
+           * Ejemplo Hook: UseState
+           * <button onClick={changeTitle.bind(this, "TituloNuevo AAA")}>Cambiar Titulo</button>
+          */}
         </>
       ) : (
           <>
