@@ -145,6 +145,15 @@ const App = () => (
            *            - useEfect
            * 
            * 
+           * /**  ----- Clase 8.3 Actualizando el estado con hooks ----- *
+           * hook useState, 
+           *  - const changeTitle = (text) => {
+           *          setState ({
+           *            ...estado,
+           *            title: text
+           *            })
+           *          }
+           * - No olvidarse de poner el bind --> onClick={changeTitle.bind(this, "TituloNuevo AAA")}
            * 
            * 
            * 
