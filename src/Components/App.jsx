@@ -172,7 +172,16 @@ const App = () => (
            *          .then(responseAxios => setState(responseAxios.data))//setState(responseAxios.data)--> actualiza el estado
            *       }, [])
            * 
-           */}
+           * /**  ----- Clase 8.5 - Componentes con multiples estados ---* 
+           * 
+           *  const [commentario, setCommentario] = useState("Sin comentarios")
+           *
+           *  const setMyCommentario = (e) => {
+           *     setCommentario (e.target.value)
+           *   }
+           *  <input type="text" placeholder="Escribe..." onChange={setMyCommentario.bind(this)}/>
+           *
+           * /}
         <MainMenu />   
         <Switch>
           <Route path="/" exact  component={Home}/>
