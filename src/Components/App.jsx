@@ -181,7 +181,21 @@ const App = () => (
            *   }
            *  <input type="text" placeholder="Escribe..." onChange={setMyCommentario.bind(this)}/>
            *
-           * /}
+           * /**------ Clase 8.6  - Mi primer custom hook ---- *
+           * 
+           * - Existen muchos Hooks en internet ademas de useEffect y useState creados por gente
+           * - Vamos a crear nuestro propio Hook
+           * - los cutomsHooks por convencion se escriben con la palabra hook+frase o palabra que describa 
+           * lo que hace el hook
+           * - los Custome Hook = Es una funcion que nosotros podemos utilizar dentro de componentes
+           *                      funcionales que a su vez pueden utilizar otros hooks.
+           * 
+           * - se creo el jsx useCourse.jsx
+           * 
+           * 
+           * 
+           */
+           }
         <MainMenu />   
         <Switch>
           <Route path="/" exact  component={Home}/>

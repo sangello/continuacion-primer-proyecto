@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import useCourse from '../CustomHooks/useCourse'
 
 const CourseHooks = ({ match }) => {
   //Se usa la funcion useState es un hook que nos permite actualizar el estado 
@@ -49,8 +50,10 @@ const CourseHooks = ({ match }) => {
 
   //Inicio un estado con un objeto vacio
   //Useeffect, hook que simula el ciclo de vida del componente 
- const [estado, setEstado] = useState({ })
- const [commentario, setCommentario] = useState("Sin comentarios")
+// const [estado, setEstado] = useState({ })
+/** Clase 8.5 - custome hook*/
+const estado = useCourse(match.params.id)
+const [commentario, setCommentario] = useState("Sin comentarios")
 
   const setMyCommentario = (e) => {
     setCommentario (e.target.value)
@@ -61,12 +64,12 @@ const CourseHooks = ({ match }) => {
   //por lo que se hace recursivo 
   //la primera vez que corre se renderiza que llama a useEffect que renderiza y vuelve a llamar a useEffect
   // para evitar eso se agrega un segundo parametro de entrada [] --> Emula el componentDidmount que corre una sola vez
-  useEffect ( () => {
+  //useEffect ( () => {
     //axios.get('https://my-json-server.typicode.com/sangello/json-db/Cursos/4')
     //con la ayuda de los template String 
-    axios.get(`https://my-json-server.typicode.com/sangello/json-db/Cursos/${match.params.id}`)
-    .then(responseAxios => setEstado(responseAxios.data))//--> actualiza el estado
-  }, [])
+    //axios.get(`https://my-json-server.typicode.com/sangello/json-db/Cursos/${match.params.id}`)
+    //.then(responseAxios => setEstado(responseAxios.data))//--> actualiza el estado
+  //}, [])
 
 
   
