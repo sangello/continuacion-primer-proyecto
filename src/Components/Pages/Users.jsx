@@ -18,7 +18,7 @@ class Users extends Component {
 
     // --- Axios ---
     componentDidMount(){
-        axios.get('https://jsonplaceholder.typicode.com/users')
+        axios.get('https://jsonplaceholder.typicode.com/user')
         .then(responseAxios => {
             this.setState({
                 users: responseAxios.data

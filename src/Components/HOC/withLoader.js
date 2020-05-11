@@ -14,7 +14,7 @@ const withLoader = ( propValue, WrapperComponent ) => {
             }
 
             render(){
-                console.log(this.props)
+                console.log(`aaa: ${JSON.stringify(this.props["MuchosUsuarios"])}`)
                 //Devuelve el mismo componente WrapperComponent que recibo como entrada
                 // con sus mismas propiedades
                 // this.props.MuchosCursos.length === 0

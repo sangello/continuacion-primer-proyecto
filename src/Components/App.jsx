@@ -144,7 +144,11 @@ const App = () => (
            *            - useState (Disponible desde la version 16.8 de react en adelante)
            *            - useEfect
            * 
-           * 
+           * - el Hook useState por teoria nos devuelve un array con 2 elementos
+           *      [1 elemento, 2 elemento]
+           *      1 elemento: estado como tal
+           *      2 elemento: callback para modificar el estado nuevamente.
+           *      
            * /**  ----- Clase 8.3 Actualizando el estado con hooks ----- *
            * hook useState, 
            *  - const changeTitle = (text) => {
@@ -162,7 +166,8 @@ const App = () => (
            *    //Useeffect, hook que simula el ciclo de vida del componente 
            *      const [estado, setState] = useState({ })
            * 
-           *    //useEffect se ejecuta cada vez que el componete se renderiza
+           *    //useEffect se ejecuta cada vez que el componete se renderiza, ya sea por
+           *    // primera vez o por actualizacion
            *    //Se vuelve a renderizar un componente cuando recibe nuevas propiedades o su estado cambia
            *    //por lo que se hace recursivo 
            *    //la primera vez que corre se renderiza que llama a useEffect que renderiza y vuelve a llamar a useEffect
@@ -185,12 +190,40 @@ const App = () => (
            * 
            * - Existen muchos Hooks en internet ademas de useEffect y useState creados por gente
            * - Vamos a crear nuestro propio Hook
-           * - los cutomsHooks por convencion se escriben con la palabra hook+frase o palabra que describa 
+           * - los cutomsHooks por convencion se escriben con la palabra use+frase o palabra que describa 
            * lo que hace el hook
            * - los Custome Hook = Es una funcion que nosotros podemos utilizar dentro de componentes
            *                      funcionales que a su vez pueden utilizar otros hooks.
            * 
-           * - se creo el jsx useCourse.jsx
+           * - se creo el customeHook --> useCourse.jsx
+           * 
+           *  /**------ Clase 8.7 - Bonus: Custom hook useFetch ---- *
+           * 
+           * Hook: son funciones de javascript sin necesidad de escribir un componente
+           *  useState --> permite utilizar estado
+           *  useEffect --> Permite utilizar el ciclo de vida de react, permite emular
+           * el componentDidMount, ComponentDidUpdate (por defecto actua asi), ComponentWillUnmount
+           *  
+           * - const [data,setData] = useState(initialState)
+           * useState recibe un estado inicial como parametro --> initialState
+           * useState devuelve un array con 2 posiciones:
+           *    data--> valor que tiene actualmente el estado.
+           *    setData --> funcion que actualiza el estado data.
+           * ---
+           * - useEffect ( () => {
+           *      ...
+           *    }, [Loading])   ---> cuando se actualiza el valor de Loading se ejecuta el useEffect
+           * 
+           * - useEffect ( () => {
+           *      ...
+           *    }, [])  --> Emulamos el ComponentDidMount, se ejecuta una sola vez.
+           * 
+           * Los Hooks NO se pueden ustilizar en componentes de clase
+           * 
+           * Ver ejemplo en el video codificado donde reutiliza el custom hook
+           * 
+           * 
+           * 
            * 
            * 
            * 
