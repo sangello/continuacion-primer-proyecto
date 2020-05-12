@@ -18,6 +18,7 @@ const MainMenu = () => (
                         <li><NavLink to="/cursos" activeClassName="activo"> Cursos</NavLink></li>
                         <li><NavLink to="/formulario" activeClassName="activo"> Formulario </NavLink></li>
                         <li><NavLink to="/usuarios" activeClassName="activo"> Usuarios </NavLink></li>
+                        <li><NavLink to="/customHook" activeClassName="activo"> Hook Custom </NavLink></li>
                     </ul>
                 </nav>
             </div>   

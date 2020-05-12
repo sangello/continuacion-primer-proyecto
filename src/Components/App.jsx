@@ -10,6 +10,7 @@ import Historial from './Pages/Historial';
 import Home from './Pages/Home';
 import Users from './Pages/Users';
 import CourseHooks from './Pages/CourseHooks';
+import Index0 from './CustomHooks/Index0';
 
 const App = () => (
 
@@ -222,9 +223,9 @@ const App = () => (
            * 
            * Ver ejemplo en el video codificado donde reutiliza el custom hook
            * 
+           * /**------ Clase 8.8 - Bonus: Custom hook useCounter ----*
            * 
-           * 
-           * 
+           * Ejercicio: useCounter
            * 
            * 
            */
@@ -238,6 +239,7 @@ const App = () => (
           <Route path="/historial/:valor" exact  component={Historial}/>
           <Route path="/usuarios" exact  component={Users}/>
           <Route path="/formulario" exact  component={ () => <Formulario name="Pagina de contacto"/> } />
+          <Route path="/customHook" exact  component={Index0} />
           <Route component = { () => (
               <div className="ed-grid">Q
                 <h1>Error 404</h1>
@@ -252,4 +254,4 @@ const App = () => (
 
 //const App = () => <h1>Hola mundo desde mi archivo App.js</h1>
 
-export default App;
+export default App
