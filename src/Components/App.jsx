@@ -226,6 +226,13 @@ const App = () => (
            * /**------ Clase 8.8 - Bonus: Custom hook useCounter ----*
            * 
            * Ejercicio: useCounter
+           * Se agregan estos dos componentes para el ejemplo de custom hook desarrollado. 
+           *  Index0.jsx
+           *  useCounter.jsx
+           * modified:   src/Components/App.jsx
+           * new file:   src/Components/CustomHooks/Index0.jsx
+           * new file:   src/Components/CustomHooks/useCounter.jsx
+           * modified:   src/Components/Organisms/MainMenu.jsx
            * 
            * 
            */
