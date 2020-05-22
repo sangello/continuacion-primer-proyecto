@@ -11,10 +11,24 @@ import Home from './Pages/Home';
 import Users from './Pages/Users';
 import CourseHooks from './Pages/CourseHooks';
 import Index0 from './CustomHooks/Index0';
+/**
+ * La razón de esto, como se explica en los Documentos de MDN, 
+ * es que una función de flecha envuelta ()devolverá el valor que ajusta, 
+ * por lo que si quería usar llaves, tenía que agregar la palabra clave return:
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#Advanced_syntax
+ * 
+ * var func = (a, b, c) => (
+ *     1
+ *  );
+ *  es lo mismo
+ *  var func = (a, b, c) => {
+ *   return 1
+ *  };
+ * 
+ */
+const App = () => {
 
-const App = () => (
-
-    <Router>
+  return    <Router>
           {/** ----------- Clase 6.4 - Metodología Atomic Design -------- * 
            * Pasos para crear la aplicacion de 0:
            *     1) npx create-react-app continuacion-primer-proyecto
@@ -257,7 +271,7 @@ const App = () => (
         </Switch>
     </Router>
 
-)
+}
 
 //const App = () => <h1>Hola mundo desde mi archivo App.js</h1>
 
